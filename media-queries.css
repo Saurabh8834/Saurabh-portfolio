@@ -1,0 +1,129 @@
+@media screen and (max-width:900px) {
+    .nav {
+        box-shadow: 0 10px 1px 0px #000, 0 10px 1px 0px #000;
+
+    }
+
+    .nav .menu {
+        display: block;
+        margin: 0 2rem;
+        font-size: 2rem;
+    }
+
+    .cross-btn{
+        /* display: none; */
+        margin: 0 2rem;
+        font-size: 2.5rem;
+        position: absolute;
+        right: 0;
+        z-index: -5;
+    }
+
+
+    .nav .right-nav {
+        position: absolute;
+        top: 120%;
+        left: -150%;
+        width: 100%;
+        border: 2px solid #000;
+        display: none;
+        background-color: gainsboro;
+    }
+
+    .right-nav ul {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-nav ul>* {
+        padding: 2rem 0;
+    }
+
+    .nav .right-nav li a:hover:before {
+        position: absolute;
+        bottom: 20%;
+
+    }
+    .nav-checkbox {
+        display: block;
+        opacity: 0;
+    }
+
+    .nav-checkbox:checked~.right-nav {
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+    .nav-checkbox:checked ~ .menu{
+        display: none;
+        color: red;
+        font-size: 5rem;
+    }
+    .nav-checkbox:checked ~ .cross-btn{
+        display: block;
+        color: red;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+
+    .hero-left {
+        align-items: center;
+    }
+
+    .hero-desc {
+        text-align: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-right {
+        width: 80%;
+        text-align: center;
+    }
+
+    .about-desc {
+        text-align: justify;
+    }
+
+    .skills-icons {
+        padding: 3rem 0;
+    }
+}
+
+
+@media screen and (max-width:450px) {
+    .nav .left-nav {
+        font-size: 1.8rem;
+    }
+
+    .hero-right img {
+        width: 200px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+    }
+
+    .skills-icons i {
+        font-size: 8rem;
+    }
+
+}
+
+@media screen and (max-width:385px) {
+    .skills-icons i {
+        font-size: 6rem;
+    }
+}

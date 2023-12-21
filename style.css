@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* border: 1px solid red; */
+}
+
+.wrapper{
+    height: 100%;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden auto;
+    background-color: #1001;
+
+}
+.nav{
+    height: 80px;
+    width: 95%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 1px 1px #000;
+    position: sticky;
+    background-color: #fff;
+    top: 0;
+    z-index: 2; 
+
+}
+.nav .left-nav{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-left:  1rem;
+    position: relative;
+}
+
+.nav .menu , .nav .cross-btn{
+    display: none;
+}
+
+.nav .right-nav{
+    position: relative;
+    display: flex;
+}
+.nav .right-nav ul>*{
+    margin: 0 1rem;
+    transition: 200ms linear;
+}
+
+.nav .right-nav ul{
+    display: flex;  
+}
+.nav .right-nav li a::before{
+    content:'';
+    position: absolute;
+    bottom: -10%;
+    background-color: red;
+    width: 0%;
+    height: 2px;
+    margin: 0 auto;
+}
+
+.nav .right-nav li a:hover:before{
+    width: 100%;
+}
+
+.nav .right-nav li:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+/* .nav .right-nav a:hover{
+    color: red; 
+} */
+a{
+    text-decoration: none;
+    color: #000;
+}
+.right-nav li{
+    list-style:none;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+.nav-checkbox{
+    position: absolute;
+    right: 40px;
+    width: 25px;
+    height: 25px;
+    display: none;
+}
+
+
+/*-------------Hero container start--------- */
+.hero-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10rem;
+    position: relative;
+
+}
+.hero-left{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hero-left>*{
+    margin: 1rem 0;
+}
+.hero-title{
+    font-size: 5rem;
+    font-weight: 600;
+
+}
+.hero-title:hover{
+    cursor: pointer;
+    background: linear-gradient( to top left,#222 60%, #999 50%);
+    /* background: conic-gradient( blue 60%, orangered 90%); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-desc{
+    font-size: 1.5rem;
+    width: 75%;
+}
+.hero-icons i{
+    font-size: 1.8rem;
+    margin: 0.5rem ;
+    transition: 200ms linear;
+}
+.hero-icons i:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+
+}
+.hero-btn{
+    width: fit-content;
+}
+.hero-btn a{
+    background: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    
+}
+.hero-btn a:hover {
+    background:#fff;
+    border: 2px solid #000;
+    color: #000;
+    /* background: conic-gradient( #000 50%, #555 50%); */
+}
+
+
+.hero-right img{
+    width: 350px;
+    filter: grayscale(100%);
+    border: 5px solid #000;
+    border-radius: 50%;
+}
+.hero-right img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    
+}
+/* .hero-right:hover::before{
+    border: 2px dashed #000;
+
+}
+.hero-right::before{
+    content: '';
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    position: absolute;
+    left: 66.3%;
+    top: 23.6%;
+    animation: profileBorder 2s linear infinite;
+
+}
+
+@keyframes profileBorder {
+    100%{
+        transform: rotate(360deg);
+    }
+} */
+
+/*-------------About Section start------------ */
+
+.heading{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    text-decoration: overline;
+}
+
+.about-section{
+
+    background-color: gainsboro;
+    padding:  2rem 0 ;
+}
+
+.about-container{
+    display: flex;
+}
+.about-left{
+    width: 50%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+.about-left img{
+    width: 40%;
+    min-width: 150px;
+}
+.about-right>*{
+    margin: 0.2rem 0 ;
+}
+.about-right{
+    width: 40%;
+    /* border: 1px solid green; */
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.about-desc{
+    line-height: 1.5rem;
+}
+
+
+/*----------------skills section------------*/
+
+
+.skills-section{
+    margin: 2rem 0;
+    position: relative;
+}
+.skills-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skills-title{
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 1px solid #000;
+    border-radius: 0 0 10px 10px; 
+    margin:-1rem 1rem;
+    background-color: #000;
+    color: #fff;
+    /* box-shadow: 1px 5px 5px 0px #000,-1px 5px 5px 0px #000; */
+}
+
+.skills-title:hover{
+    background-color: #fff;
+    color: #000;
+    box-shadow: 1px 5px 5px 0px #000,-1px 5px 5px 0px #000;
+    /* box-shadow: none;  */
+}
+
+.skills-icons{
+    padding: 3rem 1rem;
+    /* border: 1px solid red; */
+}
+
+
+.skills-icons i{
+    font-size: 10rem;
+    margin: 2rem;
+}
+.skills-icons:hover{
+    cursor: pointer;
+}
+
+.html:hover{
+    color: orangered;
+}
+.css:hover{
+    color: blue;
+}
+.javascript:hover{
+    color: yellow;
+}
+.bootstrap:hover{
+    color: purple;
+}
+.tailwind:hover{
+    color: aqua;
+}
+.react:hover{
+    color: aqua;
+}
+.git:hover{
+    color: orangered;
+}
+.github:hover{
+    color: #666;
+}
+.vscode:hover{
+    color: rgb(27, 140, 232);
+}
+
+
+.javascript:hover{
+    color: rgb(228, 209, 7);
+}
+
+
+/*---------work section----------*/
+
+
+.work-section{
+    background-color: gainsboro;
+    padding: 1rem 0;
+}
+
+.work-container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    position: relative;
+}
+.work-boxes{
+    width: 450px;
+    border: 5px solid grey;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0.5rem;
+    z-index:1;
+}
+.work-boxes img{
+    width: 60%;
+}
+
